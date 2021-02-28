@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+        <form id="form1" runat="server">
+            <div>
+                <table border="1" width="100%" bgcolor="#708090">
+                    <tr>
+                        <td align="center" valign="middle" width="100%" height="40px"
+                            style="background-color: #708090;
+               color: #000099;
+               font-family: Tahoma;
+               font-size: x-large;
+               font-weight: bold;
+               font-style: inherit;
+               font-variant: inherit;
+               text-transform: inherit;">
+                            Arunima Sports Wear Ltd.
+                        </td>
+                    </tr>
+                    <caption>
+                        <h1 align="center"
+                            style="background-color: #000099;
+                                   color: #FF3300;
+                                   font-family: Tahoma;
+                                   font-size: x-large;
+                                   font-weight: bold;
+                                   font-style: inherit;
+                                   font-variant: inherit;
+                                   text-transform: inherit;">
+                            Rising Group<br />
+                        </h1>
+                    </caption>
+                </table>
+                <table border="1" width="100%" bgcolor="#708090">
+                    <tr>
+                        <td align="left" height="40px" style="font-family: Tahoma; font-style: italic;"
+                            width="30%">
+                        </td>
+                        <td align="left" height="40px" style="font-family: Tahoma; font-style: italic;"
+                            width="40%">
+                            Select Company Profile
+                            <select>
+                                <option>API</option>
+                                <option>Atom Ap</option>
+                            </select>
+                            <br />
+                            Enter Your Name :<input id="Text1" type="text" /> <br />
+                            Enter Your Password:<input id="Password1" type="password" />
+
+                        </td>
+
+                    </tr>
+                </table>
+                <table border="1" width="100%" bgcolor="#708090">
+                    <tr>
+                        <td>
+                            <a class="btn btn-outline-light" asp-controller="Employee" asp-action="Index">Login</a>
+                            <a class="btn btn-outline-light" asp-controller="Home" asp-action="Index">Cancel</a>
+                            <a class="btn btn-outline-light" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </td>
+                    </tr>
+                </table>
+
+                <table border="1" width="100%" bgcolor="#708090">
+                    <tr>
+                        <td align="center" valign="middle" width="40%" height="350px">
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </form>
+
+</div>

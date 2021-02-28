@@ -1,0 +1,58 @@
+﻿@model IEnumerable<mvc.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    table{
+        background-color:#dddddd;
+    }
+</style>
+
+<h1>Company Management</h1>
+
+<p>
+    
+</p>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th><a asp-action="Create" class="btn btn-outline-primary"><i class="fas fa-user-plus"></i>Create New</a></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                <a asp-action="Edit" class=" btn btn-outline-light" asp-route-id="@item.EmployeeID">Edit</a> |
+                <a asp-action="Details" class=" btn btn-outline-info" asp-route-id="@item.EmployeeID">Details</a> |
+                <a asp-action="Delete" class=" btn btn-outline-danger" asp-route-id="@item.EmployeeID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
